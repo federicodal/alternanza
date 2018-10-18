@@ -11,7 +11,7 @@ class App extends React.Component{
 
   renderButtonComponent=(text,callback)=>{
    return (
-   <button onClick={() =>callback()}>
+   <button class="bottone"onClick={() =>callback()}>
 	{text}
    </button>
    )
@@ -20,14 +20,18 @@ class App extends React.Component{
 	render(){
   //this.props ci da le var passate da classi estese
 		return (
-		<div>
-			<h1> 
-			Counter:{this.state.counter}
-			</h1>
-			{this.renderButtonComponent("Incrementa",() => this.setState({counter: this.state.counter +1}))}
-			{this.renderButtonComponent("Decrementa",() => this.setState({counter: this.state.counter -1}))}    	
+		<div class="contitolo">
+			
+				<h1 class="titolo"> 
+					Counter:{this.state.counter}
+				</h1>
+
+				<div id="sidebar">
+				{this.renderButtonComponent("Incrementa",() => this.setState({counter: this.state.counter +1}))}
+				{this.renderButtonComponent("Decrementa",() => this.setState({counter: this.state.counter -1}))}    	
     	  
-    	</div>
+			</div>
+		</div>
       
       
     )
